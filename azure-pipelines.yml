@@ -21,7 +21,7 @@ pool:
 #    testResultsFiles: '**/surefire-reports/TEST-*.xml'
 #    goals: 'package'
 stages:
-  - stage: 'Build'
+  - stage: Build
     jobs:
     - job: Build1
       steps:
