@@ -25,6 +25,10 @@ stages:
     jobs:
     - job: Build1
       steps:
+      - task: ServiceNow-DevOps-Agent-Job-Notification@1
+        inputs:
+          connectedServiceName: 'ServiceNow DevOps Conn'
+          Phase: 'STARTED'
       - task: Bash@3
         inputs:
           targetType: 'inline'
@@ -32,4 +36,8 @@ stages:
             # Write your commands here
             
             echo 'Hello world'
-            
+      - task: ServiceNow-DevOps-Agent-Job-Notification@1
+        inputs:
+          connectedServiceName: 'ServiceNow DevOps Conn'
+          Phase: 'COMPLETED'
+
