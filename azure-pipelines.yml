@@ -48,7 +48,6 @@ stages:
   - stage: 'Deploy'
     jobs:
     - job: Deploy1
-      pool: server
       steps:
       - task: Bash@3
         inputs:
